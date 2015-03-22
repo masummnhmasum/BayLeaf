@@ -145,7 +145,7 @@ public class FoodExpandAdapter extends BaseExpandableListAdapter {
         try {
             charText = charText.toLowerCase(Locale.getDefault());
 
-            // Separate the search result wrwer
+            // Separate the search result
             /*String[] splited = charText.split("\\s+");
             if (splited.length > 1) {
                 charText = splited[0];
