@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_top">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:scaleType="matrix"
+            android:src="@drawable/bayleaf_banner" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/layout_banner"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:alpha="0.7"
+            android:background="#220C08"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="50dp"
+            android:paddingTop="5dp"
+            android:text="Order Online"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_banner">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnNext"
+            android:layout_below="@+id/relative_top"
+            android:layout_toLeftOf="@+id/btnNext"
+            android:layout_toRightOf="@+id/btnPrevious"
+            android:background="#A03527">
+
+            <android.support.v4.view.PagerTitleStrip
+                android:id="@+id/titlestrip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="4"
+                android:textStyle="bold" />
+        </android.support.v4.view.ViewPager>
+
+        <Button
+            android:id="@+id/btnPrevious"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView"
+            android:background="#A03527"
+            android:text="Prev"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnNext"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/btnPrevious"
+            android:background="#A03527"
+            android:text="Next"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editTextCategorySearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_navigation"
+        android:layout_marginLeft="@dimen/padding_layout_left_right"
+        android:layout_toLeftOf="@+id/btnVoiceText"
+        android:layout_marginRight="@dimen/padding_layout_left_right"
+        android:layout_alignBottom="@+id/btnVoiceText"
+        android:hint="Search...."
+        android:paddingLeft="@dimen/padding_layout_left_right"
+        android:paddingRight="@dimen/padding_layout_left_right" />
+
+    <ExpandableListView
+        android:id="@+id/expandListViewFoodItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editTextCategorySearch"
+        android:layout_centerVertical="true"
+        android:childDivider="#00000000"
+        android:divider="@android:color/transparent"
+        android:layout_marginTop="15dp"
+        android:dividerHeight="10dp"
+        android:groupIndicator="@android:color/transparent"
+        android:scrollbars="none" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voice"
+        android:id="@+id/btnVoiceText"
+        android:layout_below="@+id/relative_navigation"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

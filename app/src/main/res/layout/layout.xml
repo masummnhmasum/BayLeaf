@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/relative_top"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#250C07"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bayleaf_logo" />
+
+    <ImageButton
+        android:id="@+id/btnTopHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_menu_phone"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/btnTopCall"
+        android:layout_toStartOf="@+id/btnTopCall" />
+
+    <ImageButton
+        android:id="@+id/btnTopCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_menu_phone"
+        android:layout_alignTop="@+id/btnTopHome"
+        android:layout_toLeftOf="@+id/btnTopUser"
+        android:layout_toStartOf="@+id/btnTopUser" />
+
+    <ImageButton
+        android:id="@+id/btnTopUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_menu_phone"
+        android:layout_alignTop="@+id/btnTopCall"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

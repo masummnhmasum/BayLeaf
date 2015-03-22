@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:padding="0dp">
+
+    <include layout="@layout/layout" />
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relative_bottom"
+        android:layout_below="@+id/relative_top" />
+
+    <RelativeLayout
+        android:id="@+id/relative_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="0dp"
+        android:background="@color/app_theme_color"
+        android:gravity="center_horizontal"
+        android:paddingTop="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@drawable/home"
+                android:paddingTop="2dp"
+                android:text="LOCAL"
+                android:textSize="@dimen/menu_button_text_size" />
+
+            <Button
+                android:id="@+id/btnVoiceOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@drawable/cart"
+                android:paddingTop="2dp"
+                android:text="VOICE ORDER"
+                android:textSize="@dimen/menu_button_text_size" />
+
+            <Button
+                android:id="@+id/btnOrder"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@drawable/hand"
+                android:paddingTop="2dp"
+                android:text="ORDER"
+                android:textSize="@dimen/menu_button_text_size" />
+
+            <Button
+                android:id="@+id/btnOffers"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@drawable/download"
+                android:paddingTop="2dp"
+                android:text="OFFERS"
+                android:textSize="@dimen/menu_button_text_size" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
