@@ -77,7 +77,6 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
         args.putInt("isVoiceOrder", 1);
 
         fragment.setArguments(args);
-
         FragmentManager frgManager = getFragmentManager();
         android.app.FragmentTransaction ft = frgManager.beginTransaction();
 
@@ -93,7 +92,6 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
         args.putInt("isVoiceOrder", 1);
 
         fragment.setArguments(args);
-
         FragmentManager frgManager = getFragmentManager();
         android.app.FragmentTransaction ft = frgManager.beginTransaction();
 
